@@ -1,0 +1,1 @@
+const express=require("express"),path=require("path"),app=express();app.use(express.static(path.join(__dirname,"public")));app.get("*",(_,r)=>r.sendFile(path.join(__dirname,"public","index.html")));app.listen(process.env.PORT||3000,"0.0.0.0",()=>console.log("Commute Tracker running"));
